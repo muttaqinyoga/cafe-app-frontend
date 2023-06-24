@@ -6,79 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muttaqin Cafe</title>
     <link rel="stylesheet" href="bootstrap-material.css" />
+    <style>
+      .divider {
+        position: relative;
+        width: 100%;
+        color: #f1f1f1;
+        border-top: 3px solid !important;
+      }
+    </style>
   </head>
-  <body>
-    <main>
-      <section class="py-3 text-center container bg-light">
-        <div class="row py-lg-2">
-          <div class="col-lg-6 col-md-8 mx-auto">
-            <h3 class="fw-bold text-dark">MTQ CAFE</h3>
-            <p class="text-muted">
-              Silahkan pesan makanan yang ada di bawah ini
-            </p>
-            <ul class="nav nav-pills nav-justified" role="tablist">
-              <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link active"
-                  data-bs-toggle="tab"
-                  href="#menu"
-                  role="tab"
-                  >Menu</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  role="button"
-                  aria-expanded="false"
-                  >Kategori</a
-                >
-                <ul class="dropdown-menu">
-                  <li list-value="">
-                    <a class="dropdown-item active" href="#">Semua</a>
-                  </li>
-                  <li list-value="category_1">
-                    <a class="dropdown-item" href="#">Aneka Nasi</a>
-                  </li>
-                  <li list-value="category_3">
-                    <a class="dropdown-item" href="#">Soft Drink</a>
-                  </li>
-                  <li list-value="category_4">
-                    <a class="dropdown-item" href="#">Kopi</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item position-relative" id="cartComponent">
-                <a class="nav-link" data-bs-toggle="tab" href="#cart" role="tab"
-                  >Cart</a
-                >
-                <span
-                  id="notifCart"
-                  class="position-absolute top-0 translate-middle p-2 bg-warning border border-light rounded-circle d-none"
-                >
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <div class="gallery py-3">
-        <div class="container">
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="menu" role="tabpanel">
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"></div>
+  <body class="bg-light">
+    <div class="container-fluid">
+      <div class="row justify-content-center mt-1 mb-1">
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <div class="card py-3 bg-dark" style="padding-bottom: 0 !important">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <h3 class="fw-bold text-center text-light">MTQ CAFE</h3>
+                  <p class="text-center text-light fw-lighter">
+                    Silahkan pesan makanan yang ada di bawah ini
+                  </p>
+                  <ul class="nav nav-pills nav-justified" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        data-bs-toggle="tab"
+                        href="#menu"
+                        role="tab"
+                        >Menu</a
+                      >
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        href="#"
+                        role="button"
+                        aria-expanded="false"
+                        >Kategori</a
+                      >
+                      <ul class="dropdown-menu">
+                        <li list-value="">
+                          <a class="dropdown-item active" href="#">Semua</a>
+                        </li>
+                        <li list-value="category_1">
+                          <a class="dropdown-item" href="#">Aneka Nasi</a>
+                        </li>
+                        <li list-value="category_3">
+                          <a class="dropdown-item" href="#">Soft Drink</a>
+                        </li>
+                        <li list-value="category_4">
+                          <a class="dropdown-item" href="#">Kopi</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item position-relative" id="cartComponent">
+                      <a
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        href="#cart"
+                        role="tab"
+                        >Cart</a
+                      >
+                      <span
+                        id="notifCart"
+                        class="position-absolute top-0 translate-middle p-2 bg-warning border border-light rounded-circle d-none"
+                      >
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <hr class="divider" />
+              </div>
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class="container">
+                    <div class="tab-content" id="myTabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="menu"
+                        role="tabpanel"
+                      >
+                        <div
+                          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
+                        ></div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="cart"
+                        role="tabpanel"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <hr class="divider" />
+              </div>
+              <div class="row">
+                <div
+                  id="textYear"
+                  class="card-body text-light fw-bold text-center p-3"
+                ></div>
+              </div>
             </div>
-            <div class="tab-pane fade" id="cart" role="tabpanel"></div>
           </div>
         </div>
       </div>
-    </main>
-    <footer class="text-muted py-3 bg-light text-center">
-      <p id="textYear"></p>
-    </footer>
+    </div>
+
     <script src="bootstrap.js"></script>
     <script src="app.js"></script>
   </body>

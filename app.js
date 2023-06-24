@@ -67,14 +67,15 @@
         const div = document.createElement("div");
         div.className = "col";
         const matchedOrder = this.data.orders.find((o) => o.food === m.id);
-        div.innerHTML = `<div class="card shadow-sm">
+        div.innerHTML = `<div class="card  bg-dark shadow" style="border: 1px solid #6c6c6c !important; box-shadow: 0 0.1rem 0.1rem #666 !important;">
                                         <img
                                             src="${m.img}"
                                             class="card-img-top"
                                             height="150px"
                                         />
+                                        
                                         <div class="card-body">
-                                            <h5 class="card-title">
+                                            <h5 class="card-title text-light">
                                                 ${m.name}
                                             </h5>
                                             <span
@@ -101,7 +102,7 @@
                                                     >-</span
                                                 >
                                                 <span
-                                                    class="badge rounded-pill text-bg-dark"
+                                                    class="badge rounded-pill text-bg-info"
                                                 >${
                                                   matchedOrder
                                                     ? matchedOrder.quantity
@@ -180,7 +181,7 @@
       ul.className = "list-group";
       cartComponent.addEventListener("click", () => {
         if (this.data.orders.length === 0) {
-          cart.innerHTML = `<div class="alert alert-dismissible alert-danger">Anda belum memilih menu</div>`;
+          cart.innerHTML = `<div class="alert alert-dismissible alert-danger text-center">Anda belum memilih menu</div>`;
         } else {
           ul.innerHTML = "";
           cart.innerHTML = "";
@@ -201,9 +202,10 @@
             ul.appendChild(li);
           }
           const li = document.createElement("li");
-          li.innerHTML = `<li class="list-group-item d-flex justify-content-center">
+          li.innerHTML = `<li class="list-group-item d-flex align-items-center">
                             <button class="btn  btn-sm btn-success form-control">Buat Pesanan</button>
                             </li>`;
+          li.style = "border-radius: 2px !important;";
           ul.appendChild(li);
           cart.appendChild(ul);
         }
